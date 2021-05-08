@@ -12,6 +12,12 @@ A Python script was developed to pull blog posts from Notion and save them as st
 yarn
 ```
 
+- Launch sample pages
+
+```bash
+gatsby develop
+```
+
 - Create a dev directory to hold dev scripts (will not be committed):
 
 ```bash
@@ -29,3 +35,10 @@ cp .env.example .env
 ```bash
 yarn format
 ```
+
+---
+
+_**@TODO:**_
+
+- Create a demo directory on Notion
+- Build & deploy on Github
