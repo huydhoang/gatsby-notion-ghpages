@@ -63,13 +63,12 @@
     "url": "git+https://github.com/huydhoang/gatsby-notion-ghpages.git"
   },
   "scripts": {
+    "dev": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
     "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "pull": "dotenv -- python ./bin/get-blog-posts.py",
-    "pull-dev": "rm -rf content_bak && mv content content_bak && dotenv -- ./venv/Scripts/python ./bin_dev/get-blog-posts.py",
+    "pull-dev": "rm -rf content_bak/blog/* && mv content/blog/* content_bak/blog && dotenv -- ./venv/Scripts/python ./bin_dev/get-blog-posts.py",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {

@@ -154,8 +154,9 @@ if __name__ == "__main__":
     # Moved clean up function to the Deploy workflow!
     
     # Create destination folder
-    print(f'-> Creating new directory "{dest_path}"')
-    os.mkdir(dest_path)
+    # print(f'-> Creating new directory "{dest_path}"')
+    # os.mkdir(dest_path)
+    # /blog is now kept intact during deploy process, only posts are moved!
 
     # Get post slugs and create sub-folder for each post
 

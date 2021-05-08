@@ -1,69 +1,31 @@
-# TheDataOrg.bbudtech.com
+# Gatsby-Notion-Ghpages Template
 
-## @TODO:
+Based on [Gatsby London theme](https://www.gatsbyjs.com/starters/ImedAdel/gatsby-london) and the work of [Arnaud Valensi](https://arnaudvalensi.github.io/).
 
-- Query social links from siteMetaData
-- Get date for blog posts via NotionClient (if possible)
-- TBD...
+A Python script was developed to pull blog posts from Notion and save them as static page assets in the _'content/blog'_ folder.
 
----
+## Set up local dev environment
 
-## Original README
+- Gatsby runs on Node.js, so install `node` packages via `yarn`:
 
-<h1 align="center">
-  London by <a href="https://jamstack.studio">Jamstack Studio</a>
-</h1>
+```bash
+yarn
+```
 
----
+- Create a dev directory to hold dev scripts (will not be committed):
 
-A custom, image-centric theme for Gatsby. Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+```bash
+cp -r bin bin_dev
+```
 
-**Based on [London](https://github.com/TryGhost/London) for Ghost**
+- `NOTION_TOKEN` and `NOTION_ROOT_PAGE_ID` are required environment variables for Python to connect to Notion (see `.env.example`)
 
-**Demo: https://gatsby-london.netlify.com**
+```bash
+cp .env.example .env
+```
 
----
+- To run all files through Prettier formatter:
 
-<p align="center">
-  <a href="https://jamstack.studio">
-    <img alt="Jamstack Studio" src="https://raw.githubusercontent.com/ImedAdel/media/master/jamstack.studio_(Laptop%20with%20HiDPI%20screen).png" />
-  </a>
-</p>
-
----
-
-_I haven't really spent any time adding the JS animations or removing any unused CSS (automatically done by PurgeCSS). You will also need HTML in your Markdown file in order to add CSS classes to your images_
-
----
-
-_First time with Gatsby? Take a look on the [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
-## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Use `npx` and the Gatsby CLI to create a new project
-
-    ```sh
-    # create a new Gatsby site using the blog starter
-    npx gatsby new my-awesome-portfolio https://github.com/ImedAdel/gatsby-london
-    ```
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd my-awesome-portfolio/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+```bash
+yarn format
+```

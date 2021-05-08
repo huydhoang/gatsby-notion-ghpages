@@ -1,8 +1,5 @@
-# dev script folder
+# dev scripts
 bin_dev/
-
-# Blog posts
-content/blog/*
 
 # venv
 venv/
